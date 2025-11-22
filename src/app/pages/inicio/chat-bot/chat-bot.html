@@ -1,0 +1,48 @@
+<div class="chatbot-wrapper">
+  <!-- Botón flotante para abrir/cerrar el chat -->
+  <button class="chatbot-toggle-btn" (click)="toggleChat()">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <!-- Contenedor del chat -->
+  <div class="chatbot-container" [class.open]="isOpen">
+    <div class="chat-header">
+      <h5>Asistente Virtual</h5>
+      <button class="close-btn" (click)="toggleChat()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="chat-messages" #chatContainer>
+      <div *ngFor="let message of messages" 
+           [class.user-message]="message.sender === 'user'" 
+           [class.bot-message]="message.sender === 'bot'"
+           class="message">
+        <div class="message-content" [innerHTML]="message.text"></div>
+        <div class="message-time">
+          {{ message.timestamp | date:'HH:mm' }}
+        </div>
+      </div>
+
+      <div *ngIf="loading" class="message bot-message">
+        <div class="message-content">
+          <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opciones interactivas -->
+    <div class="chat-options" *ngIf="showOptions">
+      <button *ngFor="let option of currentOptions" 
+              class="btn btn-outline-primary option-btn"
+              (click)="selectOption(option)">
+        {{ option.label }}
+      </button>
+    </div>
+  </div>
+</div>
+

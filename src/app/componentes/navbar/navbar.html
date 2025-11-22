@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Logo / Nombre -->
+    <a class="navbar-brand fw-bold" href="#">
+      🖥️ MiTiendaPC
+    </a>
+
+    <!-- Botón para móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTienda" aria-controls="navbarTienda" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido del menú -->
+    <div class="collapse navbar-collapse" id="navbarTienda">
+      <!-- Links principales -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ofertas</a>
+        </li>
+        <!-- Dropdown categorías -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorías
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+            <li><a class="dropdown-item" href="#">Laptops</a></li>
+            <li><a class="dropdown-item" href="#">PC de escritorio</a></li>
+            <li><a class="dropdown-item" href="#">Componentes</a></li>
+            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+
+      <!-- Buscador -->
+      <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Buscar</button>
+      </form>
+
+      <!-- Carrito -->
+      <a href="#" class="btn btn-primary">
+        🛒 Carrito <span class="badge bg-light text-dark">0</span>
+      </a>
+    </div>
+  </div>
+</nav>

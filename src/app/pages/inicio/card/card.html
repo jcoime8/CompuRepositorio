@@ -1,0 +1,33 @@
+<div class="container my-4">
+  <div class="row g-4 justify-content-center">
+    <!-- Recorremos el arreglo de computadoras -->
+    <div class="col-md-4 d-flex" *ngFor="let pc of computadora?.pcs">
+      <div class="card shadow-sm flex-fill fixed-card">
+        <!-- Imagen -->
+        <img 
+          [src]="pc.imagenUrl" 
+          class="card-img-top fixed-img" 
+          alt="{{ pc.marca }} {{ pc.modelo }}"
+        >
+        
+        <!-- Cuerpo de la card -->
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ pc.marca }} - {{ pc.modelo }}</h5>
+          <p class="card-text">
+            <strong>Procesador:</strong> {{ pc.procesador }} <br>
+            <strong>RAM:</strong> {{ pc.ram }} GB <br>
+            <strong>Almacenamiento:</strong> {{ pc.almacenamiento }} GB <br>
+            <strong>Categoría:</strong> {{ pc.categoria }}
+          </p>
+        </div>
+
+        <!-- Footer con botón -->
+        <div class="card-footer text-center">
+          <button class="btn btn-primary">
+            comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

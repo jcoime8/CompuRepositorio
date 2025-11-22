@@ -1,0 +1,11 @@
+.navbar-brand {
+  font-size: 1.3rem;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.btn-primary {
+  border-radius: 20px;
+}
